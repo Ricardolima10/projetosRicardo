@@ -42,7 +42,7 @@ como colocar um link? [Site Ricardo] (<https://ricardolima10.github.io/projetosR
 
 ## Imagens
 
-![Clube do Remo](http://www.clubedoremo.com.br/images/noticias/ff68b425691636699365b69cb7d3d9d0.jpg "Clube do Remo"){width="326"}imagens
+![](http://www.clubedoremo.com.br/images/noticias/ff68b425691636699365b69cb7d3d9d0.jpg "Clube do Remo"){width="326"}imagens
 ```{r}
 # coloquei o código r
 
