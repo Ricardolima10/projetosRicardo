@@ -4,18 +4,70 @@ description: |
   Essa análise teve como objetivo analisar os salários na base da RAIS. Esse projeto foi feito na Semana Data Science na Prática da Curso-R
 author:
   - name: Ricardo Lima
-    url: https://example.com/norajones
+    url: https://ricardolima10.github.io/projetosRicardo/
 date: 2021-12-08
 output:
   distill::distill_article:
     self_contained: false
 ---
 
-
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+#Sys.setenv(TZ='GMT')
 ```
 
-Esse é meu primeiro Projeto no Portfólio.
+## Curso na Curso-r
+
+-   Esse é meu **primeiro Projeto** no [Portfólio]{.ul}.
+
+    **testando** `usethis::use_git()`
+
+como colocar um link? [Site Ricardo] (<https://ricardolima10.github.io/projetosRicardo/>)
+
+## Listas
+
+### Listas Pontos:
+
+-   Ricardo
+    - Papai
+-   Auriana
+    - Mamãe
+-   Cecília
+    - Filinha
+
+### Listas Numeradas
+
+1.  Ricardo
+2.  Auriana
+3.  Cecília
+
+## Imagens
+
+![Clube do Remo](http://www.clubedoremo.com.br/images/noticias/ff68b425691636699365b69cb7d3d9d0.jpg "Clube do Remo"){width="326"}imagens
+```{r}
+# coloquei o código r
+
+1+1
+```
 
 
+Criamos o Códigos
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+library(tidyverse)
+```
+
+Tabelas:
+
+```{r}
+knitr::kable(mtcars)
+```
+
+Imagem/grafico:
+
+```{r, out.width="90%", fig.aling = "center", dpi = 300, fig.cap = "Grafico Base mtcars", layout = "l-body-outset"}
+plot(mtcars$mpg, mtcars$hp)
+```
+
+## Código em linha
+
+Hoje é o dia `r Sys.Date()`
