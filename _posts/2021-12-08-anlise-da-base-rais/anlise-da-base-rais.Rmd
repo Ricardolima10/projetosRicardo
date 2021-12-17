@@ -1,5 +1,5 @@
 ---
-title: "Análise da Base RAIS"
+title: "Estudando RMakdown"
 description: |
   Essa análise teve como objetivo analisar os salários na base da RAIS. Esse projeto foi feito na Semana Data Science na Prática da Curso-R
 author:

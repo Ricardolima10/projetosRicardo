@@ -19,7 +19,7 @@
 #passo 8:
   distill::create_blog(".", "meu_blog", gh_pages = TRUE)
 
-#passo 9:
+#passo 9: criar post novo
     distill::create_post("Título do Meu Primeiro Post")
 
 #passo 10:
