@@ -45,6 +45,8 @@ Abaixo esta o código que carrega as cinco primeiras linhas da tabela de microda
 
 #Como eu faço se uso um SGBD  (robo que processa e me envia dados)
 
+bigrquery::bq_auth("ricardosem@gmail.com")
+
 conexao <- dbConnect(
   bigquery(),
   project = "basedosdados",
