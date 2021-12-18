@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2021-12-14-criando-novo-post/",
+    "title": "Analisando dados da RAIS",
+    "description": "Essa análise teve como objetivo analisar os salários na base da RAIS. Esse projeto foi feito na Semana Data Science na Prática da Curso-R.",
+    "author": [
+      {
+        "name": "Ricardo Lima",
+        "url": "https://example.com/norajones"
+      }
+    ],
+    "date": "2021-12-14",
+    "categories": [],
+    "contents": "\r\nNesse relatório estamos interessados em responder a pergunta:\r\n“Quanto ganha um cientista de dados?”\r\nPara isso vamos utilizar a base da RAIS anominizada.\r\nAcessando os dados da RAIS\r\nVamos utilizar o datalake da iniciativa base dos dados.\r\nAbaixo esta o código que carrega as cinco primeiras linhas da tabela de microdados.\r\n\r\n\r\nlibrary(bigrquery)\r\nlibrary(dplyr)\r\n\r\n\r\n\r\nAbaixo esta o código que carrega as cinco primeiras linhas da tabela de microdados.\r\n\r\n\r\n#cache=TRUE\r\n\r\n#Como faria se fosse ler um arquivo\r\n\r\n#tabela_normal <- read.csv(\"https://raw.githubusercontent.com/curso-r/main-r4ds-1/master/dados/imdb.csv\")\r\n\r\n#head(tabela_normal,5)\r\n\r\n#Como eu faço se uso um SGBD  (robo que processa e me envia dados)\r\n\r\nconexao <- dbConnect(\r\n  bigquery(),\r\n  project = \"basedosdados\",\r\n  dataset = \"br_me_rais\",\r\n  billing = \"meuprojetoricardo\"\r\n)\r\n\r\nprimeiras_cinco_linhas <- collect(head(select(tbl(conexao, \"microdados_vinculos\"),\r\n       everything()), 5))\r\n\r\nprimeiras_cinco_linhas\r\n\r\n\r\n# A tibble: 5 x 66\r\n    ano sigla_uf id_municipio tipo_vinculo vinculo_ativo_3112\r\n  <int> <chr>    <chr>        <chr>                     <int>\r\n1  1985 AC       1200054      1                             1\r\n2  1985 AC       1200054      1                             1\r\n3  1985 AC       1200054      1                             1\r\n4  1985 AC       1200054      1                             1\r\n5  1985 AC       1200054      1                             1\r\n# ... with 61 more variables: tipo_admissao <chr>,\r\n#   mes_admissao <int>, mes_desligamento <int>,\r\n#   motivo_desligamento <chr>, causa_desligamento_1 <chr>,\r\n#   causa_desligamento_2 <chr>, causa_desligamento_3 <chr>,\r\n#   faixa_tempo_emprego <chr>, tempo_emprego <dbl>,\r\n#   faixa_horas_contratadas <chr>,\r\n#   quantidade_horas_contratadas <int>, ...\r\n\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2021-12-18T18:35:12+00:00",
+    "input_file": "criando-novo-post.knit.md"
+  },
+  {
     "path": "posts/welcome/",
     "title": "Welcome to Projetos Ricardo Lima",
     "description": "Welcome to our new blog, Projetos Ricardo Lima. We hope you enjoy \nreading what we have to say!",

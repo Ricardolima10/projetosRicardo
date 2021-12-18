@@ -47,8 +47,6 @@ como colocar um link? [Site Ricardo] (<https://ricardolima10.github.io/projetosR
 
 ## Imagens
 
-![](http://www.clubedoremo.com.br/images/noticias/ff68b425691636699365b69cb7d3d9d0.jpg "Clube do Remo"){width="326"}imagens
-
 Imagem 2 Clube do Remo
 
 ![](images/Clube_Remo.jpg){width="325"}
@@ -80,3 +78,5 @@ plot(mtcars$mpg, mtcars$hp)
 ## Código em linha
 
 Hoje é o dia `r Sys.Date()`
+
+link base dos dados? [Base dos Dados] (<https://basedosdados.org/>)

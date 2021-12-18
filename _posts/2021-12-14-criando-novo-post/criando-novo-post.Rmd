@@ -12,12 +12,54 @@ output:
 ---
 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+Nesse relatório estamos interessados em responder a pergunta:
+
+"Quanto ganha um cientista de dados?"
+
+Para isso vamos utilizar a base da RAIS anominizada.
+
+# Acessando os dados da RAIS
+
+Vamos utilizar [o datalake da iniciativa base dos dados](https://basedosdados.org/).
+
+Abaixo esta o código que carrega as cinco primeiras linhas da tabela de microdados.
+
+
+```{r message=FALSE, warning=FALSE}
+
+library(bigrquery)
+library(dplyr)
+
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
+Abaixo esta o código que carrega as cinco primeiras linhas da tabela de microdados.
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+```{r message=FALSE, warning=FALSE}
+#cache=TRUE
+
+#Como faria se fosse ler um arquivo
+
+#tabela_normal <- read.csv("https://raw.githubusercontent.com/curso-r/main-r4ds-1/master/dados/imdb.csv")
+
+#head(tabela_normal,5)
+
+#Como eu faço se uso um SGBD  (robo que processa e me envia dados)
+
+conexao <- dbConnect(
+  bigquery(),
+  project = "basedosdados",
+  dataset = "br_me_rais",
+  billing = "meuprojetoricardo"
+)
+
+primeiras_cinco_linhas <- collect(head(select(tbl(conexao, "microdados_vinculos"),
+       everything()), 5))
+
+primeiras_cinco_linhas
+
+```
+
+
+
 
 
